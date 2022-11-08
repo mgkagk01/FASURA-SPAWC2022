@@ -3,7 +3,6 @@
 import numpy as np
 from PolarCode import PolarCode
 from utilities import bin2dec, dec2bin, crcEncoder, crcDecoder, QPSK, LMMSE
-from tools import *
 from estiFuncs import symbolsEst, channelEst, channelEstWithErrors
 class FASURA():
     def __init__(self, K, M, B, Bf, L, nc, nL, nPilots, sigma2, NOPICE):
