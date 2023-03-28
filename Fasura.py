@@ -24,10 +24,7 @@ class FASURA():
 
         ''' For polar code '''
         # Polynomial for CRC coding
-        if K < 10:
-            self.divisor = np.array([1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1], dtype=int)
-        else:
-            self.divisor = np.array([1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1], dtype=int)
+        self.divisor = np.array([1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1], dtype=int)
 
         self.lCRC = len(self.divisor)  # Number of CRC bits
         self.msgLen = self.Bs + self.lCRC  # Length of the input to the encoder
